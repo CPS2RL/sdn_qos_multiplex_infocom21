@@ -1,0 +1,57 @@
+1000 * 8 bps/0.003125
+
+=== For the paths Given by Ashish ===
+
+=== SAME ===
+
+Flowid: 0 Path: ['h10', 's1', 's2', 'h20']
+Flowid: 1 Path: ['h30', 's3', 's1', 's2', 'h20']
+Flowid: 2 Path: ['h10', 's1', 's2', 's4', 'h40']
+Flowid: 3 Path: ['h10', 's1', 's2', 's4', 'h40']
+
+Flowid: 0 Prio: 0 Observed Delay: 959.705 E2E deadline: 800
+==> Delay Constraint violated for Flowid: 1
+
+Flowid: 1 Prio: 0 Observed Delay: 1796.91 E2E deadline: 800
+==> Delay Constraint violated for Flowid: 2
+
+Flowid: 2 Prio: 0 Observed Delay: 1814.41 E2E deadline: 800
+==> Delay Constraint violated for Flowid: 3
+
+Flowid: 3 Prio: 0 Observed Delay: 1814.41 E2E deadline: 800
+==> Delay Constraint violated for Flowid: 4
+
+
+=== DIFF ===
+
+Flowid: 0 Path: ['h10', 's1', 's2', 'h20']
+Flowid: 1 Path: ['h30', 's3', 's1', 's2', 'h20']
+Flowid: 2 Path: ['h10', 's1', 's2', 's4', 'h40']
+Flowid: 3 Path: ['h10', 's1', 's3', 's2', 's4', 'h40']
+
+Flowid: 0 Prio: 0 Observed Delay: 959.705 E2E deadline: 800
+==> Delay Constraint violated for Flowid: 0
+
+Flowid: 1 Prio: 0 Observed Delay: 1814.41 E2E deadline: 800
+==> Delay Constraint violated for Flowid: 1
+
+Flowid: 2 Prio: 0 Observed Delay: 1814.41 E2E deadline: 800
+==> Delay Constraint violated for Flowid: 2
+
+Flowid: 3 Prio: 0 Observed Delay: 2669.1150000000002 E2E deadline: 800
+==> Delay Constraint violated for Flowid: 3
+
+
+=== PATH REPORTED BY AlGORITHM ===
+
+ ['h10', 's1', 's2', 's4', 'h40']
+ ['h10', 's1', 's2', 's4', 'h40']
+ ['h10', 's1', 's2', 'h20']
+ ['h30', 's3', 's2', 'h20']
+
+s1-s2  1 1 1
+s1-s3  X
+s2-s3  1
+s3-s4  X
+s2-s4  1 1 
+

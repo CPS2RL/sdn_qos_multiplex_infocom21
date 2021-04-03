@@ -1,0 +1,73 @@
+
+
+==== SAME ====
+
+
+ID: F1
+Path: ['h10', 's1', 's2', 'h20']
+Observed E2E Delay (us): 864.7850000000001
+
+ID: F2
+Path: ['h30', 's3', 's1', 's2', 'h20']
+Observed E2E Delay (us): 1752.1100000000001
+
+ID: F3
+Path: ['h10', 's1', 's2', 's4', 'h40']
+Observed E2E Delay (us): 1797.19
+
+ID: F4
+Path: ['h10', 's1', 's2', 's4', 'h40']
+Observed E2E Delay (us): 1864.81
+
+
+
+==== DIFF ====
+
+ID: F1
+Path: ['h10', 's1', 's2', 'h20']
+Observed E2E Delay (us): 864.7850000000001
+
+ID: F2
+Path: ['h30', 's3', 's1', 's2', 'h20']
+Observed E2E Delay (us): 1752.1100000000001
+
+ID: F3
+Path: ['h10', 's1', 's2', 's4', 'h40']
+Observed E2E Delay (us): 1797.19
+
+ID: F4
+Path: ['h10', 's1', 's3', 's2', 's4', 'h40']
+Observed E2E Delay (us): 2729.5950000000003
+
+
+
+
+====
+
+================================
+PATHS REPORTED BY THE ALGORITHM
+================================
+
+
+
+Candidate path generation complete. All flow has at least one candidate path.
+# of Candidate paths: 4
+Running path layout algorithm (pruning path with max interference) ...
+
+==== Iteration # 0 ====
+flowid: F3 
+path: ['h10', 's1', 's2', 's4', 'h40']
+
+==== Iteration # 1 ====
+flowid: F4 
+path: ['h10', 's1', 's2', 's4', 'h40']
+
+==== Iteration # 2 ====
+flowid: F1 
+path: ['h10', 's1', 's2', 'h20']
+
+==== Iteration # 3 ====
+flowid: F2 
+path: ['h30', 's3', 's2', 'h20']
+
+
